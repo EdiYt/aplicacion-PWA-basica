@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agenda de Contactos</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <header>
+    <h1>Agenda de Contactos</h1>
+    <button id="addBtn">Añadir</button>
+  </header>
+
+  <input type="text" id="search" placeholder="Buscar" />
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Teléfono</th>
+        <th>Correo</th>
+      </tr>
+    </thead>
+    <tbody id="contact-list"></tbody>
+  </table>
+
+  <div id="modal" class="modal hidden">
+    <form id="contact-form">
+      <input type="text" id="nombre" placeholder="Nombre" required />
+      <input type="tel" id="telefono" placeholder="Teléfono" required />
+      <input type="email" id="correo" placeholder="Correo" required />
+      <button type="submit">Guardar</button>
+      <button type="button" id="close">Cerrar</button>
+    </form>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dexie/4.2.0/dexie.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
